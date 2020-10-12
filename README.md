@@ -1,11 +1,10 @@
-
 # Next Level Week #3 - Happy
 
 > Projeto da terceira semana da Next Level Week, by [**_Rocketseat_**](https://rocketseat.com.br/).
 
 ### Estado da aplicação :clapper:
 
-- [ ] Setup do projeto
+- [x] Setup do projeto
 - [ ] API do projeto
 - [ ] Aplicação Web
 - [ ] Aplicação Mobile
