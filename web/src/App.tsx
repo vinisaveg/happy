@@ -1,12 +1,12 @@
 import React, { FunctionComponent } from 'react';
-import Landing from './pages/landing/Landing';
+import Routes from './routes';
 
 const App: FunctionComponent = () => {
-  return (
-    <>
-      <Landing />
-    </>
-  );
-}
+    return (
+        <>
+            <Routes />
+        </>
+    );
+};
 
 export default App;
