@@ -1,49 +1,20 @@
-import express, { Request, Response } from "express";
-import { getRepository } from "typeorm";
-import Orphanage from "./models/Orphanage";
+import express from "express";
+import path from "path";
+import "express-async-errors";
+import cors from "cors";
 
 import "./database/connection";
+import routes from "./routes";
+import errorHandler from "./errors/handler";
 
 const app = express();
 
+app.use(cors());
 app.use(express.json());
-
-app.get("/", (req, res) => {
-  return res.json({ message: "hello world!" });
-});
-
-app.post("/orphanages", async (request: Request, response: Response) => {
-  const {
-    name,
-    latitude,
-    longitude,
-    about,
-    instructions,
-    open_on_weekends,
-    opening_hours,
-  } = request.body;
-
-  const orphanagesRepository = getRepository(Orphanage);
-
-  const newOrphanage = orphanagesRepository.create({
-    name,
-    latitude,
-    longitude,
-    about,
-    instructions,
-    open_on_weekends,
-    opening_hours,
-  });
-
-  const result = await orphanagesRepository.save(newOrphanage);
-
-  if (result) {
-    return response.status(201).json(result);
-  }
-
-  return response.status(400).send("Something went wrong!");
-});
+app.use(routes);
+app.use("/uploads", express.static(path.join(__dirname, "..", "uploads")));
+app.use(errorHandler);
 
 app.listen(3000, () => {
-  console.log("server runnig at http://localhost:3000");
+  console.log("server running at http://localhost:3000");
 });
