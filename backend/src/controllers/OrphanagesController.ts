@@ -55,7 +55,7 @@ export default {
       longitude,
       about,
       instructions,
-      open_on_weekends,
+      open_on_weekends: open_on_weekends === "true",
       opening_hours,
       images,
     };
@@ -74,6 +74,8 @@ export default {
         })
       ),
     });
+
+    // const finalData = schema.cast(data)
 
     await schema.validate(data, { abortEarly: false });
 
