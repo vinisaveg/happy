@@ -5,8 +5,8 @@
 ### Estado da aplicação :clapper:
 
 - [x] Setup do projeto
-- [ ] API do projeto
-- [ ] Aplicação Web
+- [x] API do projeto
+- [x] Aplicação Web
 - [ ] Aplicação Mobile
 
 ### Instalação :construction_worker:

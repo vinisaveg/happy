@@ -15,6 +15,6 @@ app.use(routes);
 app.use("/uploads", express.static(path.join(__dirname, "..", "uploads")));
 app.use(errorHandler);
 
-app.listen(3000, () => {
-  console.log("server running at http://localhost:3000");
+app.listen(3001, () => {
+  console.log("server running at http://localhost:3001");
 });
