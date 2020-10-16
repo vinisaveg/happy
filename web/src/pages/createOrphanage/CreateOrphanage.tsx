@@ -1,6 +1,6 @@
 import React, { ChangeEvent, FormEvent, useState } from 'react';
 import { Map, Marker, TileLayer } from 'react-leaflet';
-import { FiPlus, FiMinusCircle } from 'react-icons/fi';
+import { FiPlus } from 'react-icons/fi';
 import { LeafletMouseEvent } from 'leaflet';
 
 import './create-orphanage.css';
@@ -74,13 +74,6 @@ export default function CreateOrphanage() {
         setPreviewImages(selectedImagesPreview);
         // console.log(selectedImagesPreview);
     };
-    const removeImage = (imageToDelete: string) => {
-        const newImages = previewImages.filter(
-            (image) => image !== imageToDelete
-        );
-
-        setPreviewImages(newImages);
-    };
 
     return (
         <div id="page-create-orphanage">
@@ -92,7 +85,7 @@ export default function CreateOrphanage() {
                         <legend>Dados</legend>
 
                         <Map
-                            center={[-27.2092052, -49.6401092]}
+                            center={[-23.6126495, -46.7381783]}
                             style={{ width: '100%', height: 280 }}
                             zoom={15}
                             onClick={handleMapClick}
@@ -146,17 +139,6 @@ export default function CreateOrphanage() {
                                     return (
                                         <div key={image}>
                                             <img src={image} alt={name} />
-                                            <span
-                                                className="delete-image"
-                                                onClick={() =>
-                                                    removeImage(image)
-                                                }
-                                            >
-                                                <FiMinusCircle
-                                                    size={20}
-                                                    color="#FF0000"
-                                                />
-                                            </span>
                                         </div>
                                     );
                                 })}
