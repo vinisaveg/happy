@@ -1,11 +1,11 @@
 <p align="center">
-    <img src="https://github.com/vinisaveg/happy/blob/master/.github/happy/logo.svg"/>
+    <img src="https://github.com/vinisaveg/happy/blob/main/.github/logo.svg"/>
 </p>
 
 <br>
 
 <p align="center">
-    <img width="100%" src="https://github.com/vinisaveg/happy/blob/master/.github/happy/happy.png"/>
+    <img width="100%" src="https://github.com/vinisaveg/happy/blob/main/.github/happy.png"/>
 </p>
 
 # Next Level Week #3 - Happy
